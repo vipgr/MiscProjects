@@ -9,16 +9,14 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-		//src/test/java/wiproassignment/gilleteproject_Features/
-		//src/test/java/wiproassignment/gilleteproject_stepDefenitions/
-		//D:\Project\JavaSelenium\gilleteproject\src\test\java\wiproassignment\gilleteproject_stepDefenitions
-		
 		
 		features = {"src/test/java/wiproassignment/gilleteproject_Features/"},
+		//tags = {"@Registration"},
+		tags = {"@Login"},
 		glue = {"stepDefenitions"},
-		dryRun = false,
-		monochrome = true,
-		strict = true,
+		monochrome = true,// It display the console o/p in good readable format
+		strict = true,// It will check any step is not defined in stepDef with respect to feature file
+		dryRun = false,// to check the mapping is matching with feature file and stepDef
 		plugin = {"pretty"}
 		)
 
