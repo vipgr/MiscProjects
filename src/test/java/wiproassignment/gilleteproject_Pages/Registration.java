@@ -99,12 +99,17 @@ public class Registration extends TestBase{
 	}
 	
 	public void checkSignmebox() {
-		clickWebelement(signMecheckbox);
-		log.info("Checked the signIn");
+
+		Boolean status = clickWebelement(signMecheckbox);
+		System.out.println(" Status of Checked the signInmebox :- "+status);
+		Assert.assertTrue("user Checked the signInmebox ", true);
+		log.info("user Checked the signInmebox");
 	}
 	
 	public void createProfile() {
-		clickWebelement(createProfilebtn);
+		Boolean status = clickWebelement(createProfilebtn);
+		System.out.println(" Status of  profile button clicked :- "+status);
+		Assert.assertTrue("user clicked on create profile button  ", true);
 		log.info("create profile button clicked");
 	}
 

@@ -11,8 +11,8 @@ import cucumber.api.junit.Cucumber;
 		
 		
 		features = {"src/test/java/wiproassignment/gilleteproject_Features/"},
-		//tags = {"@Registration"},
-		tags = {"@Login"},
+		//tags = {"@Registration","@Login","@ForgotPassword","@ResetPassword"},
+		tags = {"@functionalityTest"},
 		glue = {"stepDefenitions"},
 		monochrome = true,// It display the console o/p in good readable format
 		strict = true,// It will check any step is not defined in stepDef with respect to feature file

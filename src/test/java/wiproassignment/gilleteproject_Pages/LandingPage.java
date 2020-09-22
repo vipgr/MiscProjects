@@ -18,7 +18,7 @@ public class LandingPage extends TestBase{
 	//static WebDriver driver;
 	// Strings to verify 
 	Logger log = Logger.getLogger(LandingPage.class);
-	 String expectedTitle ="Men's razors and shavers | Gillette India";
+	String expectedTitle ="Men's razors and shavers | Gillette India";
 	
 	// Declaring the webElements
 	//@FindBy(linkText = "REGISTER")
@@ -29,6 +29,7 @@ public class LandingPage extends TestBase{
 	@FindBy(linkText = "SIGN IN")
 	@CacheLookup
 	WebElement SignInLink;
+
 
 	//Initialization the page objects
 	public LandingPage() throws IOException {
@@ -43,7 +44,8 @@ public class LandingPage extends TestBase{
 		String actualTitle =getTitle();
 		Assert.assertEquals(expectedTitle, actualTitle);
 		System.out.println("Validated Landing page Title:-  "+actualTitle);
-		
+		Assert.assertTrue("Validated Landing page Title ", true);
+		log.info("Validated Landing page Title");
 	}
 	
 	public void  clickregisterPage() throws IOException{

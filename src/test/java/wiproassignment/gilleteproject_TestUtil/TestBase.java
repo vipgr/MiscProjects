@@ -172,8 +172,17 @@ public class TestBase {
 	}
 	
 	public String getText(WebElement element) {
+		driver.navigate().refresh();
 		waitForElement(element,TestUtil.timeOutInSeconds);
 		String text = element.getText();
 		return text;	
 	}
+	
+	public String getTextwithourRefresh(WebElement element) {
+
+		waitForElement(element,TestUtil.timeOutInSeconds);
+		String text = element.getText();
+		return text;	
+	}
+	
 }
